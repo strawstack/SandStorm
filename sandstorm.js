@@ -63,6 +63,9 @@ function get(filename) {
   );
 }
 
+//
+// Example usage (enter this code in the Firefox Multi-line editor)
+//
 store("test.js", () => { 
   function add(a, b) {
     return a + b;
