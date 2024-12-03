@@ -1,3 +1,5 @@
+// Wrap your code with 'store' when you run it in the Firefox multi-line editor
+// your code will be stored in localStorage.
 function store(filename, userCode, silent) {
   if (typeof(filename) === "function") {
     userCode = filename;
@@ -9,6 +11,8 @@ function store(filename, userCode, silent) {
   if (silent !== false) userCode();
 }
 
+// Call save() when on this page https://gist.github.com/ and files you've stored in localStorage
+// will be added as new gist files.
 function save() {
   if (window.location.href.includes("gist.github.com")) {
 
@@ -52,6 +56,7 @@ function save() {
   }
 }
 
+// Prints the contents of a file you have stored to the console.
 function get(filename) {
   console.log(
   	window.localStorage.getItem(`sandstorm:${filename}`)
